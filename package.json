@@ -1,0 +1,24 @@
+{
+  "name": "psychtodayexercise",
+  "version": "1.0.0",
+  "description": "Technical exercise for Psychology Today",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cy:run:chrome": "cypress run --browser chrome",
+    "cy:run:edge": "cypress run --browser edge"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmatthews555/PsychTodayExercise.git"
+  },
+  "author": "cmatthews",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cmatthews555/PsychTodayExercise/issues"
+  },
+  "homepage": "https://github.com/cmatthews555/PsychTodayExercise#readme",
+  "devDependencies": {
+    "cypress": "^7.2.0"
+  }
+}

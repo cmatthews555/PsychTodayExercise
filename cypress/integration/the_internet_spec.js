@@ -38,13 +38,17 @@ describe('Explore the shifting content link on the-internet', () => {
 })
 
 describe('Explore the challenging DOM link on the-internet', () => {
+    // declare constants
+    const clickChallengingDOMLink = () => {
+        cy.get('[href="/challenging_dom"]').click()
+        cy.url().should('include', 'challenging_dom')
+    }
     beforeEach(() => {
         cy.visit('http://the-internet.herokuapp.com/')
     })
 
     it('Assert clicking a button reloads the page', () => {
-        cy.get('[href="/challenging_dom"]').click()
-        cy.url().should('include', 'challenging_dom')
+        clickChallengingDOMLink()
         // save the buttons as aliases for later
         cy.get('.button:nth-of-type(1)').as('firstButton')
         cy.get('.button:nth-of-type(2)').as('secondButton')
@@ -83,8 +87,7 @@ describe('Explore the challenging DOM link on the-internet', () => {
     })
 
     it('Assert count of child elements of the table on the challenging DOM', () => {
-        cy.get('[href="/challenging_dom"]').click()
-        cy.url().should('include', 'challenging_dom')
+        clickChallengingDOMLink()
         // should have 10 rows
         cy.get('tbody').children().should('have.length', 10)
         // each row should have 7 columns

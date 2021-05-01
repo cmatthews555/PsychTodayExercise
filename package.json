@@ -6,7 +6,8 @@
   "scripts": {
     "cypress:open": "cypress open",
     "cy:run:chrome": "cypress run --browser chrome",
-    "cy:run:edge": "cypress run --browser edge"
+    "cy:run:edge": "cypress run --browser edge",
+    "test": "cypress run"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,11 @@
   },
   "homepage": "https://github.com/cmatthews555/PsychTodayExercise#readme",
   "devDependencies": {
-    "cypress": "^7.2.0"
-  }
+    "@cucumber/cucumber": "^7.2.1",
+    "cypress": "^7.2.0",
+    "cypress-cucumber-preprocessor": "^4.1.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+}
 }

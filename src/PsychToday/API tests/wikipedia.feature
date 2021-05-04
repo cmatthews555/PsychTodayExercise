@@ -17,3 +17,17 @@ Scenario: Query Wikipedia for wanda and vision
     And match $.title == 'WandaVision'
     And def pageSummary = response.extract 
     And match pageSummary contains 'WandaVision is an American television miniseries created by Jac Schaeffer'
+
+
+Scenario: Assert error details for invalid query params
+    Given path 'w/api.php'
+    And param action = 'foo'
+    When method get
+    Then status 200
+    And match response contains 'badvalue'
+    And match response contains 'Unrecognized value for parameter'
+
+Scenario: Assert error code for invalid path
+    Given path '/thisIsNotAThing'
+    When method get
+    Then status 404

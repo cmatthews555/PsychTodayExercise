@@ -1,0 +1,22 @@
+{
+    "internetLandingPage": {
+        "url": "http://the-internet.herokuapp.com/",
+        "shiftingContentLink": "{a}Shifting Content",
+        "challengingDOMLink": "{a}Challenging DOM"
+    },
+    "shiftingContentPage": {
+        "menuLink": "{a}Example 1: Menu Element",
+        "menu": {
+            "homeLink": "{a}Home",
+            "contactUsLink": "{a}Contact Us"
+        },
+        "listLink": "{a}Example 3: List"
+    },
+    "challengingDOMPage": {
+        "firstButton": ".button:nth-of-type(1)",
+        "secondButton": ".button:nth-of-type(2)",
+        "thirdButton": ".button:nth-of-type(3)",
+        "table": "tbody",
+        "tableRows": "tbody tr"
+    }
+}
